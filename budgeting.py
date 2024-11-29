@@ -1,10 +1,31 @@
 #budgeting main file
 
-import bud_disp, bud_file_func
+import account_func
+
+def main_menu():
+    """Display user options"""
+    print(
+        """
+        1. Check account balance
+        2. Check your savings progress
+        3. Log an expense
+        4. Log an income
+        5. Add a new account
+        6. Add a new goal
+        7. Change the allocation for one of your goals
+        8. Transfer between your accounts
+        9. Check your transaction history
+        10. Use the budget tool
+        11. End program
+        """
+        )
+    choice = int(input("What wouuld you like to do? (1-11) "))
+    return choice
 
 #ask user what they want
 #############################
-#can check account balance
+#can check account balance - finished#
+#edit account names and balance
 #can check savings progress
 #check account + savings
 #can add an expense
@@ -16,12 +37,6 @@ import bud_disp, bud_file_func
 #check transaction log
 #monthly budget tool (takes info about regular income and expenses and determines a spending plan)
 #############################
-
-
-#check account balance
-############################
-#grabs info from text file and displays the information
-############################
 
 #check savings progress
 ###########################
@@ -75,6 +90,29 @@ import bud_disp, bud_file_func
 end_it = 0
 
 while(end_it == 0):
-    bud_disp.main_menu()
-    end_it = int(input("Enter 0 to choose again or 1 to exit "))
+    choice = main_menu()
+    if(choice == 1):
+        account_func.check()
+    elif(choice == 2):
+        print("Checking savings progress...")
+    elif(choice == 3):
+        print("Logging an expense...")
+    elif(choice == 4):
+        print("4")
+    elif(choice == 5):
+        print("5")
+    elif(choice == 6):
+        print("6")
+    elif(choice == 7):
+        print("7")
+    elif(choice == 8):
+        print("8")
+    elif(choice == 9):
+        print("9")
+    elif(choice == 10):
+        print("10")
+    elif(choice == 11):
+        end_it = 1
+    else:
+        print("Error, please try again")
 print("Goodbye")

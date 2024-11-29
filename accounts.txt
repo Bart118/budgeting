@@ -1,0 +1,4 @@
+checking
+4000
+savings
+500
